@@ -1,10 +1,3 @@
-<!--
-*
-*  INSPINIA - Responsive Admin Theme
-*  version 2.7
-*
--->
-
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>INSPINIA | Dashboard</title>
+    <title>HX | Horas Extras</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -37,28 +30,25 @@
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
-                        <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
-                             </span>
+                        <div class="dropdown profile-element"> 
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Juan Doe</strong>
                              </span> <span class="text-muted text-xs block">Director <b class="caret"></b></span> </span> </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a href="profile.html">Perfil</a></li>
+                                <li><a href="#">Perfil</a></li>
                                 <li class="divider"></li>
-                                <li><a href="login.html">Cerrar</a></li>
+                                <li><a href="#">Cerrar</a></li>
                             </ul>
                         </div>
                         <div class="logo-element">
-                            IN
+                            HX
                         </div>
                     </li>
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Escritorio</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li class="active"><a href="index.html">Inicio</a></li>
-                            <li><a href="index2.html">Agente</a></li>
-                        </ul>
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Escritorio</span></a>
+                    </li>
+                    <li>
+                        <a href="index2.html"><i class="fa fa-clock-o"></i> <span class="nav-label">Carga de Horas</span></a>
                     </li>
                     
                 </ul>
@@ -89,7 +79,7 @@
 
                 
                 <li>
-                    <a href="login.html">
+                    <a href="#">
                         <i class="fa fa-sign-out"></i> Cerrar
                     </a>
                 </li>
@@ -119,28 +109,47 @@
                     <div class="col-lg-4">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
-                                <span class="label label-success pull-right">Mensual</span>
-                                <h5>Horas disponibles</h5>
+                                <span class="label label-success pull-right">02/2018</span>
+                                <h5>Período anterior</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">1 500</h1>
-
-
-                                <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>
-                                <small>horas extras</small>
+                                <div class="row">
+                                    
+                                    <div class="col-lg-5">
+                                        <h1 class="no-margins">3.500</h1>
+                                        <small>horas asignadas</small>
+                                    </div>
+                                    
+                                    <div class="col-lg-7">
+                                        <h1 class="no-margins">1.100.123,20</h1>
+                                        <div class="stat-percent font-bold text-success">12% <i class="fa fa-level-down"></i></div>
+                                        <small>monto asignado</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
-                                <span class="label label-info pull-right">Anual</span>
-                                <h5>Monto disponible</h5>
+                                <span class="label label-warning pull-right">03/2018</span>
+                                <h5>Asignado</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">275,800</h1>
-                                <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i></div>
-                                <small>monto total disponible</small>
+                                <div class="row">
+                                    
+                                    <div class="col-lg-5">
+                                        <h1 class="no-margins">3.600</h1>
+                                        <small>horas asignadas</small>
+                                    </div>
+                                    
+                                    <div class="col-lg-7">
+                                        <h1 class="no-margins">1.330.750</h1>
+                                        <div class="stat-percent font-bold text-navy">12% <i class="fa fa-level-up"></i></div>
+                                        <small>monto asignado</small>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -150,9 +159,19 @@
                                 <h5>Pendientes</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">106</h1>
-                                <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i></div>
-                                <small>sin aprobar</small>
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <h1 class="no-margins">1.254</h1>
+                                        <small>horas asignadas</small>
+                                    </div>
+                                    
+                                    <div class="col-lg-7">
+                                        <h1 class="no-margins">63.952</h1>
+                                        <div class="stat-percent font-bold text-primary">12%</div>
+                                        <small>monto disponible</small>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -224,41 +243,20 @@
 
                     <div id="jstree1">
                         <ul>
-                            <li class="jstree-open">PRESI
+                            <li class="jstree-open">DIR. GRAL. DE TECNOL. INFORM. Y TELECOMUNIC. (DGTIYT)
                                 <ul>
-                                    <li class="jstree-open">VICE
-                                        <ul>
-                                            <li >SPVICEP
-                                            
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>CGATUP
-                                        <ul>
-                                            <li data-jstree='"type":"html"}'>otro</li>
-                                            <li data-jstree='"type":"html"}'>otro</li>
-                                            <li data-jstree='"type":"html"}'>otro</li>
-                                        </ul>
-                                    </li>
-                                    <li>CGAPIUP
+                                    <li >DIRECCIÓN DE COMUNICACIONES (DCOM)
                                         
                                     </li>
-                                    <li class="jstree-open">SG
+                                    <li  class="jstree-open">DIRECCIÓN DE GESTIÓN INFORMÁTICA (DGI)
                                         <ul>
-                                            <li data-jstree='"type":"img"}'>DGARRHHO</li>
-                                            <li data-jstree='"type":"img"}'>DS</li>
-                                            
+                                            <li>DPTO. SOPORTE TÉCNICO (DST)</li>
+                                            <li>DPTO. DESARROLLO DE SISTEMAS (DDS)</li>
                                         </ul>
                                     </li>
-                                    <li class="jstree-open">DGA
-                                        <ul>
-                                            <li data-jstree='"type":"js"}'>DPCP</li>
-                                            <li data-jstree='"type":"js"}'>DC</li>
-                                            <li data-jstree='"type":"js"}'>DPS</li>
-                                            <li data-jstree='"type":"js"}'>...</li>
-                                        </ul>
+                                    <li>DIRECCIÓN DE SEGURIDAD INFORMÀTICA (DSI)
+                                        
                                     </li>
-                                   
                                 </ul>
                             </li>
                         </ul>
@@ -295,89 +293,69 @@
 
                                     <div class="table-responsive">
                                         <table class="table table-striped">
-
+                                            <thead>
+                                                
+                                            <tr>
+                                                <td>nombre</td>
+                                                <td>smpl</td>
+                                                <td>100</td>
+                                                <td>50</td>
+                                                <td>almuerzo</td>
+                                                <td></td>
+                                            </tr>
+                                            </thead>
                                             <tbody>
                                             <tr>
                                                 <td>juan Perez</td>
-                                                <td>Secretaría</td>
-                                                <td><strong>50 HE</strong></td>
-                                                <td>14 Jul 2015</td>
+                                                <td><strong>2</strong></td>
+                                                <td><strong>13</strong></td>
+                                                <td><strong>36</strong></td>
+                                                <td><strong>3</strong></td>
                                                 <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
                                             </tr>
                                             <tr>
                                                 <td>Augusto Rolando</td>
-                                                <td>Dirección</td>
-                                                <td><strong>47 HE</strong></td>
-                                                <td>14 Jul 2015</td>
-                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                            </tr><tr>
+                                                <td><strong>2</strong></td>
+                                                <td><strong>11</strong></td>
+                                                <td><strong>34</strong></td>
+                                                <td><strong>3</strong></td>
+                                                <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                            </tr>
+
+                                            <tr>
                                                 <td>juan Perez</td>
-                                                <td>Secretaría</td>
-                                                <td><strong>50 HE</strong></td>
-                                                <td>14 Jul 2015</td>
+                                                <td><strong>2</strong></td>
+                                                <td><strong>13</strong></td>
+                                                <td><strong>32</strong></td>
+                                                <td><strong>3</strong></td>
                                                 <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
                                             </tr>
                                             <tr>
                                                 <td>Augusto Rolando</td>
-                                                <td>Dirección</td>
-                                                <td><strong>47 HE</strong></td>
-                                                <td>14 Jul 2015</td>
-                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                            </tr><tr>
+                                                <td><strong>2</strong></td>
+                                                <td><strong>16</strong></td>
+                                                <td><strong>31</strong></td>
+                                                <td><strong>3</strong></td>
+                                                <td><a href="#"><i class="fa fa-clock-o text-muted"></i></a></td>
+                                            </tr>
+
+                                            <tr>
                                                 <td>juan Perez</td>
-                                                <td>Secretaría</td>
-                                                <td><strong>50 HE</strong></td>
-                                                <td>14 Jul 2015</td>
+                                                <td><strong>2</strong></td>
+                                                <td><strong>13</strong></td>
+                                                <td><strong>36</strong></td>
+                                                <td><strong>3</strong></td>
                                                 <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
                                             </tr>
                                             <tr>
                                                 <td>Augusto Rolando</td>
-                                                <td>Dirección</td>
-                                                <td><strong>47 HE</strong></td>
-                                                <td>14 Jul 2015</td>
-                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                            </tr><tr>
-                                                <td>juan Perez</td>
-                                                <td>Secretaría</td>
-                                                <td><strong>50 HE</strong></td>
-                                                <td>14 Jul 2015</td>
-                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Augusto Rolando</td>
-                                                <td>Dirección</td>
-                                                <td><strong>47 HE</strong></td>
-                                                <td>14 Jul 2015</td>
-                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                            </tr><tr>
-                                                <td>juan Perez</td>
-                                                <td>Secretaría</td>
-                                                <td><strong>50 HE</strong></td>
-                                                <td>14 Jul 2015</td>
-                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Augusto Rolando</td>
-                                                <td>Dirección</td>
-                                                <td><strong>47 HE</strong></td>
-                                                <td>14 Jul 2015</td>
-                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                            </tr><tr>
-                                                <td>juan Perez</td>
-                                                <td>Secretaría</td>
-                                                <td><strong>50 HE</strong></td>
-                                                <td>14 Jul 2015</td>
-                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Augusto Rolando</td>
-                                                <td>Dirección</td>
-                                                <td><strong>47 HE</strong></td>
-                                                <td>14 Jul 2015</td>
+                                                <td><strong>2</strong></td>
+                                                <td><strong>16</strong></td>
+                                                <td><strong>36</strong></td>
+                                                <td><strong>3</strong></td>
                                                 <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
                                             </tr>
 
-                                            
                                             </tbody>
                                         </table>
                                     </div>
