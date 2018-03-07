@@ -119,40 +119,13 @@
                             <div class="col-sm-8 b-r">
 
 
-
+<div> 
+<h3 class="m-t-none m-b">Carga diaria</h3>
+</div>
                         <div class="row">
-                            <div class="col-sm-6"> <h3 class="m-t-none m-b">Primer segmento</h3>
+                            <div class="col-sm-4"> 
 <div class="form-group" id="data_1">
-                                <label class="font-normal">Comienzo</label>
-                                <div class="input-group ">
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-
-                            </div>
-                            <div class="col-sm-6">
-                                 <h3 class="m-t-none m-b">Segundo segmento</h3>
-<div class="form-group" id="data_1">
-                                <label class="font-normal">Fin</label>
-                                <div class="input-group date">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            </div>
-                        </div>
-                               
-
-
-                        <div class="row">
-                            <div class="col-sm-12">
-                                
-
-                            </div></div>
-                        <div class="row">
-                            <div class="col-sm-6">
-<div class="form-group" id="data_1">
-                                <label class="font-normal">Comienzo</label>
+                                <label class="font-normal">Fecha</label>
                                 <div class="input-group date">
                                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                     <input type="text" class="form-control" value="03/04/2014">
@@ -160,16 +133,30 @@
                             </div>
 
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
+
 <div class="form-group" id="data_1">
-                                <label class="font-normal">Fin</label>
+                                <label class="font-normal">entrada</label>
                                 <div class="input-group date">
-                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                    <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                                    <input type="text" class="form-control" value="8:00">
+                                </div>
+                            </div>
+
+                            </div>
+                            <div class="col-sm-4">
+
+<div class="form-group" id="data_1">
+                                <label class="font-normal">Salida</label>
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                                    <input type="text" class="form-control" value="16:00">
                                 </div>
                             </div>
 
                             </div>
                         </div>
+                               
 
 
                                         <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit">
@@ -267,10 +254,10 @@
 
     $(document).ready(function() {
 
-            $('.i-checks').iCheck({
-                checkboxClass: 'icheckbox_square-green',
-                radioClass: 'iradio_square-green'
-            });
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green'
+        });
 
         /* initialize the external events
          -----------------------------------------------------------------*/
@@ -318,49 +305,63 @@
             },
             events: [
                 {
-                    title: 'All Day Event',
-                    start: new Date(y, m, 1)
-                },
-                {
-                    title: 'Long Event',
-                    start: new Date(y, m, d-5),
-                    end: new Date(y, m, d-2)
-                },
-                {
-                    id: 999,
-                    title: 'Repeating Event',
-                    start: new Date(y, m, d-3, 16, 0),
+                    title: new Date(y, m, d),
+                    start: new Date(y, m, d),
+                    start: new Date(y, m, d, 8, 0),
+                    end: new Date(y, m, d, 16, 0),
+                    id: 1,
                     allDay: false
                 },
                 {
-                    id: 999,
-                    title: 'Repeating Event',
-                    start: new Date(y, m, d+4, 16, 0),
+                    title: new Date(y, m, d-1),
+                    start: new Date(y, m, d-1, 8, 0),
+                    end: new Date(y, m, d-1, 16, 0),
+                    id: 2,
                     allDay: false
                 },
                 {
-                    title: 'Meeting',
-                    start: new Date(y, m, d, 10, 30),
+                    title: new Date(y, m, d-2),
+                    start: new Date(y, m, d-2, 8, 0),
+                    end: new Date(y, m, d-2, 16, 0),
+                    id: 3,
                     allDay: false
                 },
                 {
-                    title: 'Lunch',
-                    start: new Date(y, m, d, 12, 0),
-                    end: new Date(y, m, d, 14, 0),
+                    title: new Date(y, m, d-3),
+                    start: new Date(y, m, d-3, 8, 0),
+                    end: new Date(y, m, d-3, 16, 0),
+                    id: 4,
                     allDay: false
                 },
                 {
-                    title: 'Birthday Party',
-                    start: new Date(y, m, d+1, 19, 0),
-                    end: new Date(y, m, d+1, 22, 30),
+                    title: new Date(y, m, d-4),
+                    start: new Date(y, m, d-4, 8, 0),
+                    end: new Date(y, m, d-4, 16, 0),
+                    id: 5,
                     allDay: false
                 },
                 {
-                    title: 'Click for Google',
-                    start: new Date(y, m, 28),
-                    end: new Date(y, m, 29),
-                    url: 'http://google.com/'
+                    title: new Date(y, m, d-5),
+                    start: new Date(y, m, d-5, 8, 0),
+                    end: new Date(y, m, d-5, 16, 0),
+                    id: 6,
+                    allDay: false
+                },
+                {
+                    title: new Date(y, m, d-6),
+                    start: new Date(y, m, d-6, 8, 0),
+                    end: new Date(y, m, d-6, 16, 0),
+                    id: 7,
+                    allDay: false
+                },
+                {
+                    title: new Date(y, m, d-7),
+                    start: new Date(y, m, d-7, 8, 0),
+                    end: new Date(y, m, d-7, 16, 0),
+                    id: 8,
+                    allDay: false
                 }
+                
             ]
         });
 
