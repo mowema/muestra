@@ -22,6 +22,12 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <style>
+        .jstree-anchor{
+            width:98%;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -179,7 +185,7 @@
         </div>
 
         <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-10">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
                                 <h5>Asignación Anual </h5>
@@ -224,6 +230,20 @@
 
                             </div>
                         </div>
+
+                        <div class="col-lg-2">
+                    <div class="widget lazur-bg p-lg text-center">
+                        <div class="m-b-sm">
+                            <i class="fa fa-folder fa-4x"></i>
+                            <h1 class="m-xs">412</h1>
+                            <h3 class="font-bold no-margins">
+                                pendientes 
+                            </h3>
+                            <small>de aprobación</small>
+                        </div>
+                    </div>
+                    
+                </div>
                     </div>
                     <div class="row">
         <div class="col-lg-6">
@@ -243,18 +263,26 @@
 
                     <div id="jstree1">
                         <ul>
-                            <li class="jstree-open">DIR. GRAL. DE TECNOL. INFORM. Y TELECOMUNIC. (DGTIYT)
+                            <li class="jstree-open">DIR. GRAL. DE TECNOL. INFORM. Y TELECOMUNIC. (DGTIYT) <span class="pull-right"><span class="label label-default">H asig. 70</span>
+                                 <span class="label label-primary ">H cons. 60</span></span>
+                                
                                 <ul>
-                                    <li >DIRECCIÓN DE COMUNICACIONES (DCOM)
+                                    <li >DIRECCIÓN DE COMUNICACIONES (DCOM) <span class="pull-right"><span class="label label-default">H asig. 90</span>
+                                 <span class="label label-warning ">H cons. 110</span></span>
                                         
                                     </li>
                                     <li  class="jstree-open">DIRECCIÓN DE GESTIÓN INFORMÁTICA (DGI)
+                                        <span class="pull-right"><span class="label label-default">H asig. 80</span>
+                                 <span class="label label-danger ">H cons. 170</span></span>
                                         <ul>
-                                            <li>DPTO. SOPORTE TÉCNICO (DST)</li>
-                                            <li>DPTO. DESARROLLO DE SISTEMAS (DDS)</li>
+                                            <li>DPTO. SOPORTE TÉCNICO (DST) <span class="pull-right"><span class="label label-default">H asig. 90</span>
+                                 <span class="label label-primary ">H cons. 60</span></span></li>
+                                            <li>DPTO. DESARROLLO DE SISTEMAS (DDS) <span class="pull-right"><span class="label label-default">H asig. 110</span>
+                                 <span class="label label-primary ">H cons. 70</span></span></li>
                                         </ul>
                                     </li>
-                                    <li>DIRECCIÓN DE SEGURIDAD INFORMÀTICA (DSI)
+                                    <li>DIRECCIÓN DE SEGURIDAD INFORMÀTICA (DSI) <span class="pull-right"><span class="label label-default">H asig. 60</span>
+                                 <span class="label label-primary ">H cons. 50</span></span>
                                         
                                     </li>
                                 </ul>
@@ -475,11 +503,14 @@
             ];
 
             
+            var data3 = [
+                [gd(2018,1, 1), 48.9],[gd(2018,2, 1), 51.42],[gd(2018,3, 1), 48.36],[gd(2018,4, 1), 49.98],[gd(2018,5, 1), 51.90],[gd(2018,6, 1), 50.16],[gd(2018,7, 1), 44.52],[gd(2018,8, 1), 50.16],[gd(2018,9, 1), 43.93],[gd(2018,10, 1), 48.83],[gd(2018,11, 1), 50.85],[gd(2018,12, 1), 49.84]
 
+            ]
 
             var dataset = [
                 {
-                    label: "Asignación",
+                    label: "# horas asignadas",
                     data: data2,
                     color: "#1ab394",
                     bars: {
@@ -489,10 +520,10 @@
                         lineWidth:0
                     }
 
-                }/*, 
+                }, 
                 {
-                    label: "Pendiente",
-                    data: data2,
+                    label: "Promedio $ per cápita",
+                    data: data3,
                     yaxis: 2,
                     color: "#1C84C6",
                     lines: {
@@ -513,7 +544,7 @@
                         lineWidth: 1,
                         fill: 0.1
                     },
-                }*/
+                }
             ];
 
 
@@ -539,6 +570,7 @@
                     axisLabelPadding: 3
                 }, {
                     position: "right",
+                    max: 100,
                     clolor: "#d5d5d5",
                     axisLabelUseCanvas: true,
                     axisLabelFontSizePixels: 12,
